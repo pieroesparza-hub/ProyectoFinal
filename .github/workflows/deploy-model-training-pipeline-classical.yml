@@ -1,5 +1,4 @@
 name: deploy-model-training-pipeline
-
 on:
   push:
     branches:
