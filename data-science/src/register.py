@@ -42,7 +42,8 @@ def main(args):
     # Write model info
     print("Writing JSON")
     model_info = {"id": f"{args.model_name}:{model_version}"}
-    output_path = os.path.join(args.model_info_output_path, "model_info.json")  # Specify the name of the JSON file (model_info.json)
+     output_path = os.path.join(args.model_path, "model_info.json")  # Specify the name of the JSON file (model_info.json)
+    #output_path = os.path.join(args.model_info_output_path, "model_info.json")  # Specify the name of the JSON file (model_info.json)
     with open(output_path, "w") as of:
         json.dump(model_info, of)  # write model_info to the output file
 
