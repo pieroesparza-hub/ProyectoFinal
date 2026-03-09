@@ -18,12 +18,12 @@ def parse_args():
     parser = argparse.ArgumentParser("train")
     parser.add_argument("--train_data", type=str, help="Path to train dataset")  # Specify the type for train_data
     parser.add_argument("--test_data", type=str, help="Path to test dataset")  # Specify the type for test_data
+    parser.add_argument("--model_output", type=str, help="Path of output model")  # Specify the type for model_output
     parser.add_argument('--n_estimators', type=int, default=100,
                         help='The number of trees in the forest')  # Specify the type and default value for n_estimators
     parser.add_argument('--max_depth', type=int, default=none,
                         help='The maximum depth of the tree')  # Specify the type and default value for max_depth
-    parser.add_argument("--model_output", type=str, help="Path of output model")  # Specify the type for model_output
-
+   
     args = parser.parse_args()
 
     return args
@@ -71,9 +71,10 @@ if __name__ == "__main__":
     lines = [
         f"Train dataset input path: {args.train_data}",
         f"Test dataset input path: {args.test_data}",
+        f"Model output path: {args.model_output}"
         f"Number of Estimators: {args.n_estimators}",
         f"Max Depth: {args.max_depth}",
-        f"Model output path: {args.model_output}"
+        
     ]
 
     for line in lines:
