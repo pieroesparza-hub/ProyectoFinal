@@ -1,7 +1,7 @@
 $schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
 type: pipeline
 display_name: Streamlining_Auto_Vehicle_Pricing   # Provide the display name for the pipeline
-experiment_name: Vehicle_Pricing_workflow_v3  # Provide the experiment name
+experiment_name: Vehicle_Pricing_workflow_v4  # Provide the experiment name
 description: Automated system that improves pricing accuracy, operational efficiency, and scalability # Provide the description for the pipeline
 
 inputs:
@@ -21,6 +21,7 @@ settings:
   default_datastore: azureml:workspaceblobstore
   default_compute: azureml:cpu-cluster
   continue_on_step_failure: false
+  force_rerun: true
 
 jobs:
   prep_data:
